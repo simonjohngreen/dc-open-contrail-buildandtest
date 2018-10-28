@@ -1,0 +1,71 @@
+{
+    "servers": {
+        "vm-opencontrail-buildvm-box": {
+            "enabled": "false",
+            "debug": "true",
+            "provider": "virtualbox",
+            "guest_hostname": "vm1-opencontrail-build-vm",
+            "box": "ubuntu/trusty64",
+            "timezone": "GB",
+            "gui": "false",
+            "cpus": 1,
+            "memory": 4096,
+            "paravirtprovider": "kvm",
+            "scripts": [
+                "packages.sh",
+                "customrepo.sh",
+                "build2.sh"
+            ],
+            "makeopts": "all",
+            "gituser": "insecurecontrailuser",
+            "gitemail": "insecurecontrailuser@gmail.com",
+            "replacekey": "true",
+            "keytype": "untrusted"
+        },
+        "vm2-opencontrail-buildvm-fusion": {
+            "enabled": "false",
+            "debug": "true",
+            "provider": "fusion",
+            "guest_hostname": "vm2-opencontrail-build-vm",
+            "box": "ubuntu/trusty64",
+            "timezone": "GB",
+            "gui": "false",
+            "cpus": 1,
+            "memory": 4096,
+            "paravirtprovider": "kvm",
+            "scripts": [
+                "packages.sh",
+                "customrepo.sh",
+                "build2.sh"
+            ],
+            "makeopts": "all",
+            "gituser": "insecurecontrailuser",
+            "gitemail": "insecurecontrailuser@gmail.com",
+            "replacekey": "true",
+            "keytype": "untrusted"
+        },
+        "vm3-opencontrail-buildvm-vcenter": {
+            "enabled": "true",
+            "debug": "true",
+            "provider": "vcenter",
+            "guest_hostname": "vm3-opencontrail-build-vm",
+            "box": "gosddc/precise32",
+            "timezone": "GB",
+            "gui": "false",
+            "cpus": 1,
+            "memory": 4096,
+            "paravirtprovider": "kvm",
+            "scripts": [
+                "packages.sh",
+                "customrepo.sh",
+                "build2.sh"
+            ],
+            "makeopts": "all",
+            "gituser": "insecurecontrailuser",
+            "gitemail": "insecurecontrailuser@gmail.com",
+            "replacekey": "true",
+            "keytype": "untrusted"
+        }
+
+    }
+}
